@@ -1,0 +1,45 @@
+/* #p1 {
+    color: pink;
+}
+
+#p0 {
+    color: pink;
+} */
+
+.pinkclass {
+    color: pink
+}
+
+#firstp {
+    color: red;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 2px;
+    width: 100px;
+    height: 200px;
+    padding: 30px;
+    padding-top: 50px;
+    padding: 50px;
+    margin: 20px;
+}
+
+#secondp {
+    border: 1px solid black;
+    padding: 20px 0px 50px 20px;
+    margin: 20px;
+    text-align: center;
+    font-size: 50px;
+    background-color: red;
+}
+
+body {
+    border: 1px solid red;
+}
+
+#b1, #b2, #b3 {
+    display: inline;
+}
+
+table, tr, td {
+    border: 1px solid black;
+}
