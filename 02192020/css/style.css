@@ -1,0 +1,123 @@
+body {
+    /* background-image: url('../images/corona.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; */
+}
+
+h3 {
+    /* color: rgb(97, 97, 34); */
+    color: #00FF00;
+    font-size: 30px;
+}
+
+p {
+    color: purple;
+}
+
+#first-p {
+    color: red;
+}
+
+.blue-color {
+    color: green;
+}
+h1.blue-color > a {
+    color: red;
+}
+
+h1 div p a {
+    color: brown;
+}
+
+#table-heading {
+    background-color: chocolate;
+    padding: 30px;
+    /* margin: 20px; */
+    margin-bottom: 100px;
+    border: 3px solid red;
+}
+
+td {
+    padding: 10px 10px 10px 30px;
+    padding-left: 10px;
+    width: 100px;
+}
+
+td:first-child {
+    text-align: center;
+}
+
+td:nth-child(2), td:nth-child(3) {
+    text-align: right;
+}
+
+th {
+    background-color: cornsilk;
+}
+
+table, td, th {
+    border: 2px solid red;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tr:nth-child(odd) {
+    background-color:darkgray;
+}
+
+#a-pseodu-class:link {
+    color: green;
+}
+
+#a-pseodu-class:active {
+    color: yellow;
+}
+
+#a-pseodu-class:hover {
+    color: red;
+}
+
+#a-pseodu-class:visited {
+    color: black;
+}
+
+/* Layout */
+
+#header {
+    background-color: red;
+    height: 45px;
+}
+
+#nav {
+    background-color: blue;
+}
+
+#nav ul.menu {
+    margin: 0px;
+    height: 45px;
+    padding-left: 0px;
+}
+
+#nav ul.menu li {
+    display: inline;
+    padding: 10px;
+}
+
+#section aside.aside {
+    background-color: grey;
+    width: 200px;
+    height: 400px;
+    float: left;
+}
+
+#section article.content h3 {
+    margin-top: 0px;
+}
+
+#footer {
+    background-color: red;
+    height: 45px;
+}

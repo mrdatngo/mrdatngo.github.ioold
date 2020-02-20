@@ -1,11 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        h3 {
+            /* color: rgb(97, 97, 34); */
+            color: #FF0000;
+            font-size: 30px;
+        }
+    </style>
 </head>
 <body>
-    Khởi động
+
+    <form action="./sign_in.php" method="POST|GET">
+        <label for="name">Name</label>
+        <input type="text" id="name"> <br><br>
+        <label for="password">Password</label>
+        <input type="password">
+        <input type="submit">
+        <br>
+        <label for="male" for="male">Male ashdfkjshfkhsdfk hskdfsd hfkjsd</label>
+        <input type="radio" id="male">
+        <br>
+        <select name="student" id="student">
+            <optgroup label="female">
+                <option value="1">Thuong</option>
+                <option value="2">Huyen</option>
+            </optgroup>
+            <option value="3">Nguyen</option>
+        </select>
+
+        <select name="student" id="student" multiple>
+            <option value="1">Thuong</option>
+            <option value="2">Huyen</option>
+            <option value="3">Nguyen</option>
+        </select>
+    </form>
+
+    <!-- <body style="background-image: url('./images/corona.jpg');"> -->
+
+    <p style="padding-bottom: 1000px;"></p>
+    <!-- Layout -->
+    <div>
+        <header id="header">This is Header</header>
+        <div style="width: 100%; height: 45px; background-color: #00F;">
+            <nav id="nav" style="float: right;">
+                <ul class="menu">
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+        </div>
+        <div style="clear: both"></div>
+
+        <section id="section">
+            <aside class="aside">
+                Search <br>
+                HAha <br>
+            </aside>
+            <article class="content">
+                <h3>Content</h3>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo ullam culpa ab illo temporibus quis
+                nostrum laboriosam eius eaque ducimus, sequi nemo nesciunt pariatur reiciendis aspernatur. Expedita
+                natus ut numquam.
+            </article>
+        </section>
+        <div style="clear: both;"></div>
+        <footer id="footer">Footer</footer>
+    </div>
+    <!-- Css selector -->
+    <div style="background-color: blue; width: 50px; float: right;">HAha</div>
+    <button style="background-color: yellow">Click me</button>
+    <a id="a-pseodu-class" href="http://google.com" target="_blank">Go to <span style="color: red"> google </span> </a>
+    <a id="a-pseodu-class" href="http://google.com" target="_blank">Go to <span style="color: red"> google </span> </a>
+    <p id="first-p">Today is wednesday!</p>
+    <p>Today is wednesday!</p>
+    <p>Today is wednesday!</p>
+    <p class="blue-color">Today is wednesday! <a href="http://google.com">Google</a> </p>
+    <h1 class="blue-color">
+        Today is wednesday!
+        <div>
+            <p>
+                <a href="http://fb.com">Facebook1</a>
+            </p>
+        </div>
+        <a href="http://fb.com">Facebook2</a>
+    </h1>
+    <p class="blue-color">Today is wednesday!</p>
+    <h1><a href="http://youtube.com">Youtube</a></h1>
+    <!-- Khởi động -->
+    <mark style="color: red; font-size: 40px;">Deadline: 23/02/2020 nộp 16/16 bài tập</mark>
+    <small> Không làm 1 bài thì phạt 5k </small>
+    <h3 style="color: blue;"> Khởi động </h3>
+    <p>Hôm nay là ngày 02/19/2020</p>
+    <b>Make me look stronger</b>
+    <i>Make me ilatic</i>
+    <em>Make me like tag i</em>
+    <mark>Đánh dấu</mark>
+    <ul style="list-style-type: square;">
+        <li>Un</li>
+        <li>Order</li>
+        <li>List</li>
+    </ul>
+    <ol type="a">
+        <li>Order</li>
+        <li>List</li>
+    </ol>
+    <h3 id="table-heading">Table</h3>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Thuong</td>
+            <td>24</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Khoi</td>
+            <td>25</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Đức</td>
+            <td>25</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Tiến</td>
+            <td>21</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Tiến</td>
+            <td>21</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Tiến</td>
+            <td>21</td>
+        </tr>
+    </table>
+    <br>
+
 </body>
+
 </html>
