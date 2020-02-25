@@ -1,0 +1,43 @@
+table, td, th {
+    border: 1px solid purple;
+    padding: 5px;
+}
+td:first-child {
+    width: 100px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+#title {
+    background-color: #FF0000;
+    color: white;
+    font-weight: bold;
+    text-align: right;
+}
+
+#logo {
+    text-align: center;
+}
+
+#heading {
+    background-color: #FFBBBB;
+    color: red;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+i.sub-title {
+    font-weight: bold;
+    color: red;
+}
+
+ol.reward li b {
+    font-style: italic;
+}
+
+ol.reward > li {
+    margin-bottom: 10px;
+}

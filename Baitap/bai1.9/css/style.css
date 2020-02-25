@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: red;
+    text-align: center;
+}
+
+table, td, th {
+    border: 1px solid red;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th:first-child {
+    width: 30%;
+    text-align: center;
+}
+
+th {
+    background-color: #CC0033;
+    color: white;
+}
+
+tr:last-child td {
+    text-align: left;
+}
+
+td[rowspan] {
+    color: red;
+}
+
+td:last-child, td:nth-last-child(2) {
+    text-align: center;
+}

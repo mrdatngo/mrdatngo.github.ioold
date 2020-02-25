@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo form và điều kiển trên form</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <h3>Đăng nhập</h3>
+    <div id="wrapper-login" >
+        <form id="login" action="" oninput="result.value = fcode.value">
+            <table id="form-table">
+                <tr>
+                    <td><label for="fcode"> Mã người dùng </label></td>
+                    <td><input type="text" name="fcode" id="fcode" value="default"></td>
+                </tr>
+                <tr>
+                    <td> <label for="password"> Mật khẩu </label></td>
+                    <td><input type="text" id="password"> </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <input type="submit" value="Đăng nhập" onclick="event.preventDefault();onSubmit(event)">
+                    </td>
+                </tr>
+                <tr id="result" style="visibility: hidden;">
+                    <td colspan="2" id="request"></td>
+                </tr>
+                <tr style="text-align: center;">
+                    <td colspan="2"><output name="result" for="fcode"></output></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <script>
+        function onSubmit(event) {
+            var tdElem = document.createElement("TD")
+            tdElem.setAttribute("colspan", 2)
+            tdElem.setAttribute("style", "text-align: center")
+            tdElem.textContent = document.getElementById("fcode").value
+            var trElem = document.createElement("TR");
+            trElem.appendChild(tdElem)
+            document.getElementById("form-table").getElementsByTagName("tbody")[0].appendChild(trElem)
+
+            var resultElem = document.getElementById("result")
+            resultElem.style.visibility = "visible";
+            resultElem.style.textAlign = "center";
+            resultElem.getElementsByTagName("td")[0].innerHTML = document.getElementById("fcode").value
+        }
+    </script>
+</body>
+
+</html>

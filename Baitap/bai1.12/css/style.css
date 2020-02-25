@@ -1,0 +1,61 @@
+
+
+h3 {
+    color: green;
+    text-align: center;
+}
+
+table, td {
+    background-color: lightgreen;
+    border: 1px solid black;
+    border-collapse: collapse;
+    color: green;
+}
+
+#wrapper-login #login table {
+    width: 500px;
+}
+
+#wrapper-login #login {
+    width: 500px;
+    margin: 0 auto;
+}
+
+#notice {
+    color: red;
+}
+
+#notice-wrapper {
+    display: none;
+}
+
+.control {
+    text-align: center;
+}
+
+#name {
+    width: 90%;
+}
+
+#address {
+    width: 75%;
+}
+
+#phone_number {
+    width: 50%;
+}
+
+/* center layout by margin auto */
+/* #wrapper-login #login table {
+    width: 300px;
+}
+
+#wrapper-login #login {
+    width: 300px;
+    display: inline-block;
+}
+
+#wrapper-login {
+    width: 300px;
+    margin: 0 auto;
+} */

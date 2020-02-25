@@ -1,0 +1,30 @@
+h1:first-child {
+    text-align: center;
+}
+
+h3 {
+    color: #FF3399; 
+    background-color: #FECFFD; 
+    text-align: center;
+}
+
+div {
+    text-align: center;
+    background-color: #FFFFCC;
+}
+
+hr {
+    width: 150px;
+}
+
+#first-part {
+    color: blue;
+}
+
+#second-part {
+    color: red;
+}
+
+#third-part {
+    color: green;
+}

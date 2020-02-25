@@ -1,0 +1,16 @@
+h2 {
+    color: #FFCC00;
+    text-align: center;
+}
+
+body {
+    background-color: #A06D21;
+    background-image: url("../images/corona.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 100px;
+}
+
+div {
+    color: white;
+}

@@ -1,0 +1,15 @@
+h3 {
+    color: orange;
+    text-align: center;
+}
+
+table, tr, td {
+    background-color: lightblue;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+#wrapper-login #login table {
+    width: 300px;
+    margin: auto;
+}

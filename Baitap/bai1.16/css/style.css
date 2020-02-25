@@ -1,0 +1,52 @@
+* {
+    margin: 0px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table td {
+    border: 1px solid grey;
+}
+
+.table tr td li {
+    padding: 5px;
+}
+
+#heading td h1 {
+    color: blue;
+    text-align: center;
+}
+
+#heading td {
+}
+
+.sub-title {
+    background-color: blue;
+    color: white;
+}
+
+.thumbnail .label {
+    color: blue;
+    font-weight: bold;
+}
+
+.thumbnail img {
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin: 3px;
+}
+
+.thumbnail::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+.menu-wrapper {
+    text-align: start;
+}
