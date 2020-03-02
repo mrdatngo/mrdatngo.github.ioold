@@ -1,0 +1,56 @@
+/*
+Reset browser
+* {
+    padding: 0px;
+    margin: 0px;
+} */
+
+/* p {
+    color: blue;
+} */
+
+p.p1 {
+    color: blue;
+}
+
+.p2 {
+    color: red;
+    /* background-color: blue; */
+}
+
+#p_id {
+    color: yellow;
+}
+
+/* Attribute selector */
+p[class] {
+    color: red;
+}
+
+p[class="firstP light"] {
+    background-color: yellow;
+}
+
+p[class~="firstP"] {
+    border: 1px solid black;
+}
+
+p[class~="beauti"] {
+    border: 1px solid red;
+}
+
+p[class^="firstP"] {
+    font-size: 40px;
+}
+
+p[class$="beauti"] {
+    font-style: italic;
+}
+
+h1 ~ h2 {
+    color: blue;
+}
+
+.first-level h4 {
+    color: yellow;
+}

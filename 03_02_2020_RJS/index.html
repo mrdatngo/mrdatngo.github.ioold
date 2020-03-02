@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            background-color: red;
+            /* display: inline; */
+        }
+
+        a {
+            background-color: blue;
+        }
+
+        div {
+            color: yellow;
+        }
+
+        span {
+            color: blueviolet;
+        }
+
+        .my-div {
+            width: 100px;
+            height: 100px;
+            color: black;
+            background-color: yellow;
+            /* display: inline; */
+            display: inline-block;
+        }
+
+        .my-table,
+        .my-table tr,
+        .my-table tr td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        .my-table {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Các thẻ heading, paragraph và format -->
+    <h1>Heading 6</h1>
+    <h6>Headiing 6</h6>
+    <p> <i> <b> Paragrapth </b> </i> </p>
+    <p> Sub: <sub>2</sub> </p>
+    <p> Sup: <sup>2</sup> </p>
+
+    <!-- Phân biệt inline và block -->
+    <p> This is paragraph </p>
+    <a href="">facebook.com</a>
+    <a href="">facebook.com</a>
+
+    <p style="display: inline;"> Today is awesome </p>
+    <div style="display: inline;"> day </div>
+    <p style="display: inline;">!!!!!!</p>
+
+    <p> Today is awesome <span> day </span> !!!!!! </p>
+
+    <div class="my-div"> This is my div</div>
+    <div class="my-div"> This is my div</div>
+
+    <!-- Table, list -->
+    <ul style="list-style-type: square;">
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+    </ul>
+    <ol type="A">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ol>
+
+    <table class="my-table">
+        <tr>
+            <td>#</td>
+            <td colspan="2" style="text-align: center;">Infor</td>
+        </tr>
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Class</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Ngân</td>
+            <td rowspan="4">RJS2002E</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Bình</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Hòa</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Thiện</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+
+    <!-- html form -->
+    <form action="login2.php" method="POST">
+        <fieldset>
+            <legend>Login form</legend>
+            <label for="username">Username: </label>
+            <input type="text" id="username" name="username" placeholder="Enter user name">
+            <br><br>
+            <label for="password">Password: </label>
+            <input type="password" id="password" name="password" placeholder="Nhập password">
+            <br><br>
+            <label for="yearOfBirth">Year of birth:</label>
+            <select name="yearOfBirth" id="yearOfBirth">
+                <option value="1">Tháng 1</option>
+                <option value="2">Tháng 2</option>
+                <option value="3">Tháng 3</option>
+                <option value="4">Tháng 4</option>
+            </select>
+            <br><br>
+            <label for="list-name">List Name:</label>
+            <select name="list-name" id="list-name">
+                <option value="1">Nguyễn Văn A</option>
+                <option value="2">Nguyễn Văn B</option>
+                <option value="3">Nguyễn Văn C</option>
+                <option value="4">Nguyễn Văn A</option>
+            </select>
+            <br><br>
+            <label for="male">Nam</label>
+            <input type="radio" id="male">
+
+            <label for="male">Nữ</label>
+            <input type="radio" id="male">
+            <br><br>
+            <input type="checkbox" id="policy">
+            <label for="policy">Bạn có đồng ý với poilicy của chúng tôi</label>
+            <br><br>
+            Choose Date:
+            <input type="date" name="date" id="date" min="1979-12-31" max="1980-1-31">
+            <br><br>
+            Color picker:
+            <input type="color" name="color-picker" id="color-picker">
+            <br><br>
+            Height:
+            <input type="number" name="height" id="height" min="1" max="5" >
+            <br><br>
+            <input type="submit" value="Submit2" id="submit2" onclick="alert('hello class')">
+            <input type="submit" value="Submit" id="submit" onclick='onSumbit()'>
+            <p id="show-success" style="color: green; background-color: grey; display: none;"> Bạn đã đăng nhập thành công! </p>
+        </fieldset>
+    </form>
+    <script>
+        function onSumbit() {
+            event.preventDefault();
+            // document.getElementById("show-success").style.color = "blue";
+            var pSuccess = document.getElementById("show-success");
+            pSuccess.style.display = "block";
+            pSuccess.style.color = "red";
+        }
+    </script>
+
+</body>
+
+</html>

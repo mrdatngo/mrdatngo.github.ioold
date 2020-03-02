@@ -15,12 +15,28 @@
     padding: 5px;
 }
 
-#heading td h1 {
-    color: blue;
-    text-align: center;
+#header .banner {
+    position: absolute;
+    z-index: -1;
 }
 
-#heading td {
+#header td {
+    color: white;
+    padding: 0px;
+}
+
+#header td h1 {
+    color: white;
+    text-align: center;
+    margin: 20px;
+}
+
+#header span:first-child {
+    font-size: 50px;
+}
+
+#header span:nth-child(2) {
+    font-size: 40px;
 }
 
 .sub-title {
@@ -28,7 +44,7 @@
     color: white;
 }
 
-.thumbnail .label {
+.thumbnail .label, .thumbnail2 .label {
     color: blue;
     font-weight: bold;
 }
@@ -46,7 +62,30 @@
     clear: both;
 }
 
+.thumbnail2 .left-list {
+    display: inline-block;
+    width: 85%;
+    margin-right: 0px;
+}
+
+.thumbnail2 .img-wrapper {
+    display: inline-block;
+    width: 10%;
+}
 
 .menu-wrapper {
-    text-align: start;
+    vertical-align: baseline;
+    min-width: 250px;
+}
+
+.menu-wrapper ul {
+    margin-top: 20px;
+}
+
+.backtotop-wrapper {
+    text-align: right;
+}
+
+.backtotop {
+    background-color: grey;
 }
