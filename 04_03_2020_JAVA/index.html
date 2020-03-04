@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- paragraph, heading, format -->
+    <p>This is a paragraph</p>
+    <h1> This is h1 </h1>
+    <h6> <b> <i> This is h6 </i> </b> </h6>
+    <em>This is em</em>
+    <strong> <mark> This is strong tag </mark> </strong>
+
+    <!-- Data list, table -->
+    <ul style="list-style-type: square;">
+        <li>item1</li>
+        <li>item2</li>
+    </ul>
+    <ol type="A">
+        <li>itemA</li>
+        <li>itemB</li>
+        <li>itemC</li>
+    </ol>
+    <h2>Chương trình học</h2>
+    <table>
+        <tr>
+            <th rowspan="2">Nhóm học phần</th>
+            <th rowspan="2">Môn học</th>
+            <th colspan="2">Số tiết</th>
+            <!-- <td></td> -->
+        </tr>
+        <tr>
+            <th>Lý thuyết</th>
+            <th>Thực hành</th>
+        </tr>
+        <tr>
+            <td rowspan="2">I.Tin học văn phòng</td>
+            <td>Hệ Điều hành</td>
+            <td class="cell--center">3</td>
+            <td class="cell--center">5</td>
+        </tr>
+        <tr>
+            <td>Sử dụng Internet</td>
+            <td>3</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td colspan="4"> <a href="http://fb.com">facebook</a> </td>
+        </tr>
+    </table>
+    <br>
+    <!-- html form -->
+    <form action="server.js" method="POST|GET">
+        <fieldset>
+            <legend>Login form</legend>
+            <label for="username">User name: </label>
+            <input type="text" name="username" id="username" required>
+            <br><br>
+            <label for="password">Password: </label>
+            <input type="password" name="password" id="password" required>
+            <br><br>
+            <input type="checkbox" id="remmeber" name="remember">
+            <label for="remmeber">Nhớ phiên đăng nhập</label>
+            <br><br>
+            <label for="male">Nam</label>
+            <input type="radio" id="male" name="sex">
+            <label for="female">Nữ</label>
+            <input type="radio" id="female" name="sex">
+            <br><br>
+            <select name="students" id="students">
+                <optgroup label="Nữ">
+                    <option value="T3HS1">Huyen</option>
+                    <option value="T3HS3">Thuong</option>
+                </optgroup>
+                <optgroup label="Nam">
+                    <option value="T3HS4">Toan</option>
+                    <option value="T3HS5">Khoi</option>
+                </optgroup>
+            </select>
+            <label for="date-of-birth">Ngày sinh</label>
+            <input type="date" id="date-of-birth">
+            <br>
+            <label for="height">Chiều cao</label>
+            <input type="number" id="height" min="0" max="2">
+            <input type="color">
+            <br><br>
+            <input type="submit" value="Xác nhận" onclick="onSubmit()">
+            <p id="show-confirm" style="display: none;"> Bạn đã đăng nhập thành công </p>
+        </fieldset>
+    </form>
+    <script>
+        function onSubmit() {
+            event.preventDefault();
+            // alert('hello class')
+            document.getElementById("show-confirm").style.display = "block";
+        }
+    </script>
+
+    <br><br><br><br><br><br>
+</body>
+
+</html>
