@@ -1,0 +1,61 @@
+
+/* p {
+    color: yellow;
+} */
+
+/* * {
+    margin: 0px;
+    padding: 0px;
+} */
+
+/* ul, li, body {
+    margin: 0px;
+    padding: 0px;
+} */
+
+#p2 {
+    color: yellow;
+}
+
+p.pg {
+    color: blue;
+}
+
+p#p2 {
+    color: bisque;
+}
+
+.border-solid {
+    border: 1px solid red;
+    color: green;
+}
+
+/* Chọn tất cả thẻ p có class */
+/* p[class] {
+    color: blue;
+} */
+
+p[class="big-size border--blue"] {
+    font-size: 30px;
+    border: 1px solid blue;
+}
+
+p[class~="big-size"] {
+    font-size: 10px;
+}
+
+p[class~="red--color"] {
+    color: red;
+}
+
+p[class^="red--color"] {
+    background-color: yellow;
+}
+
+p[class$="red--color"] {
+    background-color: red;
+}
+
+p[class*="red"] {
+    background-color: violet;
+}

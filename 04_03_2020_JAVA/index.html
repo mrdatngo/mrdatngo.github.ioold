@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <meta name="author" content="mrdatngo">
+    <meta name="keyword" content="web, front-end, html, css">
+    <link rel="icon" type="image/png" href="https://static-zmp3.zadn.vn/skins/zmp3-v5.2/images/icon_zing_mp3_60.png">
 </head>
 
 <body>
@@ -59,7 +62,8 @@
         <fieldset>
             <legend>Login form</legend>
             <label for="username">User name: </label>
-            <input type="text" name="username" id="username" required>
+            <input type="text" name="username" id="username">
+            <p style="color: red" id="username-error"></p>
             <br><br>
             <label for="password">Password: </label>
             <input type="password" name="password" id="password" required>
@@ -90,17 +94,61 @@
             <input type="color">
             <br><br>
             <input type="submit" value="Xác nhận" onclick="onSubmit()">
-            <p id="show-confirm" style="display: none;"> Bạn đã đăng nhập thành công </p>
+            <!-- <p id="show-confirm" style="display: none;"> Bạn đã đăng nhập thành công </p> -->
+            <p id="show-confirm"></p>
         </fieldset>
     </form>
     <script>
         function onSubmit() {
             event.preventDefault();
+            var username = document.getElementById("username").value
+            // alert(username);
+            if (username === "") {
+                document.getElementById("username-error").innerHTML = "Vui lòng nhập tên!";
+            } else if (username.length < 3) {
+                document.getElementById("username-error").innerHTML = "Tên phải dài hơn 3 ký tự!";
+            } else {
+                document.getElementById("username-error").innerHTML = "";
+            }
             // alert('hello class')
-            document.getElementById("show-confirm").style.display = "block";
+            // document.getElementById("show-confirm").style.display = "block";
+            document.getElementById("show-confirm").innerHTML = "Bạn đã đăng nhập thành công! " + username;
         }
     </script>
 
+    <!-- html layout -->
+    <header>
+        <h2>This is Header</h2>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">HomePage</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <article>
+        <aside>
+            This is aside
+        </aside>
+        <section>
+            <h3>This is heading of secion</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est veniam suscipit exercitationem iusto, provident quasi laboriosam consequuntur similique tempora beatae illo explicabo, velit, sed sint cumque expedita sunt obcaecati. Corporis.</p>
+        </section>
+    </article>
+    <footer>
+        This is footer
+    </footer>
+
+    <!-- Html media -->
+    <audio src="./medias/audios/chan_ai.mp3" autoplay controls></audio>
+    <video src="/path/to/video" autoplay controls></video>
+    
+    <!-- html graphic -->
+    <canvas width="200px" height="200px" style="background-color: red;"></canvas>
+        This browser is not support!
+    </canvas>
+    
     <br><br><br><br><br><br>
 </body>
 
