@@ -1,0 +1,213 @@
+/* tag selector */
+p {
+    font-weight: bold;
+}
+
+/* class selector */
+.big-size {
+    font-size: 30px;
+}
+
+p.border-solid {
+    border: 1px solid black;
+}
+
+/* id selector */
+#para1 {
+    color: red;
+}
+
+#para2 {
+    color: blue;
+}
+
+p[id] {
+    background-color: aqua;
+}
+
+p[class] {
+    border-right: 3px solid red;
+}
+
+/* h3[class^="border-solid"] {
+    font-size: 50px;
+} */
+
+p[class~="big-size"] {
+    border-left: 3px solid blue;
+}
+
+p[class="big-size border-solid"] {
+    border-bottom: 3px solid blue;
+}
+
+/* Selector phân cấp */
+
+.block {
+    width: 200px;
+    height: 200px;
+}
+
+.sm-block {
+    width: 100px;
+    height: 100px;
+}
+
+.bg-red {
+    background-color: red;
+}
+
+.bg-blue {
+    background-color: blue;
+}
+
+.block p {
+    color: yellow;
+}
+
+.block > p {
+    border: 1px solid black;
+}
+
+.block + .bg-blue {
+    background-color: black;
+}
+
+/* psuedo-element  */
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.custom-table, td {
+    border: 1px solid black;
+}
+
+/* .first-column {
+    text-align: center;
+} */
+
+td:first-child {
+    text-align: center;
+}
+
+td:last-child {
+    text-align: right;
+}
+
+td:nth-last-child(2) {
+    color: blue;
+}
+
+a:hover {
+    color: red;
+}
+
+/* td {
+    text-align: center;
+} */
+
+.my-input:focus {
+    width: 300px;
+}
+
+p.first-letter::first-letter {
+    color: red;
+    font-size: 20px;
+}
+
+p.first-letter::first-line {
+    color: blue;
+}
+
+.after-block::after {
+   content: "abcd";
+   display: block;
+   background-color: blue;
+}
+
+p.para6::after {
+    content: "After";
+}
+
+.border-1 {
+    border: 1px solid black;
+}
+
+/* Position css */
+.position-rel {
+    position: relative;
+}
+
+.child {
+    /* position: absolute; */
+    top: 100px;
+    left: 30px;
+}
+
+.bg-yellow {
+    background-color: yellow;
+}
+
+.position-ab {
+    position: absolute;
+    top: 100px;
+    left: 30px;
+}
+
+.position-fix {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+}
+
+/* Over-flow */
+.overflow-block {
+    overflow: scroll;
+}
+
+/* Linear gradient */
+
+.linear-gradient {
+    background-image: linear-gradient( red , blue 10%, yellow);
+}
+
+/* Transition */
+.my-transition {
+    position: relative;
+    transition: width 4s;
+}
+
+.my-transition:hover {
+    width: 400px;
+}
+
+.my-input {
+    width: 50px;
+    transition: width 1s;
+}
+
+.my-input:focus {
+    width: 300px;
+}
+
+/* animation */
+.my-animation {
+    position: relative;
+    transition: all 5s;
+    animation: slide 2s ease 1s infinite forwards;
+}
+
+.my-animation:hover {
+    transform: rotate(360deg);
+    border-radius: 50%;
+    opacity: 0;
+}
+
+
+@keyframes slide {
+    0% { left: 0px; }
+    50% { left: 100px; }
+    100% { left: 0px; }
+}

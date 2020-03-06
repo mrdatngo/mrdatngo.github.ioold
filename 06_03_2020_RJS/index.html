@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- Selector -->
+    <p id="para1" class="big-size border-solid"> This is paragraph 1 </p>
+    <p class="border-solid">This is paragraph</p>
+    <p id="para2" class="big-size"> This is paragraph 2 </p>
+    <p>This is paragraph 3</p>
+    <h3 class="border-solid">heading 3</h3>
+    <br>
+
+    <!-- Selector phân cấp -->
+    <div class="block bg-red">
+        <div class="sm-block bg-blue">
+            <p> Paragraph 1 </p>
+        </div>
+        <p> Paragraph 2</p>
+    </div>
+    <div class="sm-block bg-blue"></div>
+    <div class="block bg-red bg-blue"></div>
+    <br>
+    <!-- psuedo-element -->
+    <table class="custom-table">
+        <tr>
+            <td class="first-column">STT</td>
+            <td>Tên</td>
+            <td>Tuổi</td>
+        </tr>
+        <tr>
+            <td class="first-column">1</td>
+            <td>Quỳnh</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td class="first-column">2</td>
+            <td>Thiện</td>
+            <td>22</td>
+        </tr>
+        <tr>
+            <td class="first-column">3</td>
+            <td>Phúc</td>
+            <td>30</td>
+        </tr>
+    </table>
+
+    <a href="#">facebook</a>
+
+    <!-- focus pseudo -->
+    <input type="text" class="my-input">
+
+    <p class="first-letter"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quis quos a, nulla aliquid quidem veniam voluptates asperiores facere eum quo saepe in. Quae eos et ut dolores tenetur illo! </p>
+
+    <br>
+    
+    <div class="sm-block bg-red after-block">asd</div>
+
+    <p class="para6">hihi</p>
+    <br><br><br>
+
+    <div class="block bg-red border-1">
+        <div class="position-rel child border-1"> Position </div>
+        <p>a</p>
+        <p>abcd</p>
+        <p>abcd</p>
+        <p>abcd</p>
+    </div>
+    <hr>
+
+    <div class="block bg-yellow border-1 position-rel ">
+        <div class="position-ab border-1"> Position </div>
+        <p>a</p>
+        <p>abcd</p>
+        <p>abcd</p>
+        <p>abcd</p>
+    </div>
+
+    <br><br><br>
+    <hr>
+
+    <div class="block border-1 position-fix">
+        Click here to chat
+    </div>
+    
+    <br><br><br>
+    <hr>
+
+    <div class="block overflow-block">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint voluptate ad doloribus numquam eaque sit, dolore fuga recusandae deserunt cumque repellat similique, fugit consequatur! Doloremque maiores quas adipisci nesciunt cum.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint voluptate ad doloribus numquam eaque sit, dolore fuga recusandae deserunt cumque repellat similique, fugit consequatur! Doloremque maiores quas adipisci nesciunt cum
+        </p>
+    </div>
+
+    <div class="block linear-gradient"></div>
+    
+    <br><br><br>
+
+    <div class="my-transition block bg-red"></div>
+    <hr>
+    Search:
+    <input type="text" class="my-input">
+    
+    <br><br><br>
+
+    <div class="block linear-gradient my-animation"></div>
+
+    <br><br><br><br><br>
+</body>
+</html>
