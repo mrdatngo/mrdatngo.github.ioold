@@ -333,6 +333,10 @@ p {
 /* contact */
 .contact {
     background-image: url("../images/slider_1.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .contact-box-wrapper {
     width: 100%;

@@ -148,3 +148,7 @@
 .display-inline-block {
     display: inline-block;
 }
+
+.br-md {
+    border-radius: 30px;
+}
