@@ -1,0 +1,124 @@
+.slide-show-container {
+    width: 100%;
+}
+
+.slide-show-wrapper {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slide-show-wrapper .slide-show {
+    width: 100%;
+    display: block;
+}
+
+.active.left {
+    position: relative;
+    animation: fadeout-left 1s linear 0s 1 forwards;
+}
+
+.next.left {
+    position: absolute;
+    display: block;
+    animation: fadein-left 1s linear 0s 1 forwards;
+}
+
+.active.right {
+    position: relative;
+    animation: fadeout-right 1s linear 0s 1 forwards;
+}
+
+.next.right {
+    position: absolute;
+    display: block;
+    animation: fadein-right 1s linear 0s 1 forwards;
+}
+
+.slide-show-wrapper .slide-show img {
+    width: 100%;
+}
+
+@keyframes fadein-left {
+    from {
+        top: 0;
+        left: 100%
+    }
+
+    to {
+        top: 0;
+        left: 0
+    }
+}
+
+@keyframes fadeout-left {
+    from {
+        left: 0%;
+        top: 0;
+    }
+
+    to {
+        top: 0;
+        left: -100%
+    }
+}
+
+@keyframes fadein-right {
+    from {
+        top: 0;
+        left: -100%
+    }
+
+    to {
+        top: 0;
+        left: 0;
+    }
+}
+
+@keyframes fadeout-right {
+    from {
+        left: 0%;
+        top: 0;
+    }
+
+    to {
+        top: 0;
+        left: 100%
+    }
+}
+
+.slide-show-wrapper .slide-show .number-text {
+    position: absolute;
+}
+
+.slide-show-wrapper .left-arrow,
+.slide-show-wrapper .right-arrow {
+    position: absolute;
+    padding: 20px;
+    margin-top: -25px;
+    top: 50%;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.slide-show-wrapper .left-arrow:hover,
+.slide-show-wrapper .right-arrow:hover {
+    background-color: black;
+}
+
+.right-arrow {
+    right: 0px;
+}
+
+.slide-show-wrapper .slide-show .caption {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: white;
+}
