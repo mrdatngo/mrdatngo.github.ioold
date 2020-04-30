@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div>
+        <h3 class="title">
+            <span class="title--color"> Bài 10: </span> Tạo trang web có nội dung là chương trình khuyến mãi dầu gội
+            Double Rich.
+        </h3>
+        <img src="./images/solution.png" alt="">
+
+        <h4 class="title under-line">Yêu cầu thiết kế</h4>
+        <table>
+            <tr>
+                <th>STT</th>
+                <th>Đối tượng</th>
+                <th>Yêu cầu</th>
+                <th>Hằng số mẫu</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Trang web</td>
+                <td>- Tiêu đề cửa sổ: Tạo bảng, trộn dòng và cột</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td></td>
+                <td>
+                    - Bảng biểu: gồm 4 dòng, 4 cột. <br>
+                    - Dòng đầu: nền đỏ đậm, chữ trắng, có hình ảnh <br>
+                    - Dòng 3: nền đỏ nhạt, chữ đỏ đậm <br>
+                    - Định dạng nội dung trong bảng biểu như hình trên <br>
+                </td>
+                <td>
+                    #FF0000,
+                    #FFFFFF,
+                    #FFBBBB,
+                    #FF0000
+                </td>
+            </tr>
+        </table>
+        <h4 class="title under-line">Hướng dẫn giải</h4>
+        <table>
+            <tr>
+                <th>STT</th>
+                <th>Đối tượng</th>
+                <th>Hướng dẫn cài đặt</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Trang web</td>
+                <td>- Sử dụng tag &lt;title&gt;</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Nội dung trang web</td>
+                <td>
+                    - Bảng biểu: Tag &lt;table&gt; và t.t align, width, bordercolor <br>
+                    - Dòng 1: Tag &lt;tr&gt; <br>
+                    <ul>
+                        <li>Ô đầu: Tag &lt;td&gt; và t.t colspan, style(background-color; color; font-weight; font-size:20px), align</li>
+                        <li>Ô thứ 2: Tag &lt;td&gt; và t.t width, rowspan, align</li>
+                    </ul>
+                    - Dòng 2: Tag &lt;tr&gt; và &lt;td&gt; và t.t colspan, height <br>
+                    - Dòng 3: Tag &lt;tr&gt; và &lt;td&gt; và t.t colspan, style(color; background-color; font-weight; font-size:28px), align <br>
+                    - Dòng 4: Tag &lt;tr&gt; <br>
+                    <ul>
+                        <li>Ô 1, 2: Tag &lt;td&gt; và t.t colspan, valign</li>
+                        <li>”Sản phẩm khuyến mãi”, ”Đối tượng tham gia” và ”Cách thức nhận giải”: Tag &lt;font&gt; và t.t style(color; font-weight; font-size:18px)</li>
+                        <li>Các đọan văn bản còn lại: Tag &lt;ul&gt;, &lt;li&gt;, &lt;ol&gt;, &lt;b&gt; và &lt;i&gt;</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

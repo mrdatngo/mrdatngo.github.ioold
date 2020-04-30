@@ -1,0 +1,91 @@
+* {
+    margin: 0px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table td {
+    border: 1px solid grey;
+}
+
+.table tr td li {
+    padding: 5px;
+}
+
+#header .banner {
+    position: absolute;
+    z-index: -1;
+}
+
+#header td {
+    color: white;
+    padding: 0px;
+}
+
+#header td h1 {
+    color: white;
+    text-align: center;
+    margin: 20px;
+}
+
+#header span:first-child {
+    font-size: 50px;
+}
+
+#header span:nth-child(2) {
+    font-size: 40px;
+}
+
+.sub-title {
+    background-color: blue;
+    color: white;
+}
+
+.thumbnail .label, .thumbnail2 .label {
+    color: blue;
+    font-weight: bold;
+}
+
+.thumbnail img {
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin: 3px;
+}
+
+.thumbnail::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.thumbnail2 .left-list {
+    display: inline-block;
+    width: 85%;
+    margin-right: 0px;
+}
+
+.thumbnail2 .img-wrapper {
+    display: inline-block;
+    width: 10%;
+}
+
+.menu-wrapper {
+    vertical-align: baseline;
+    min-width: 250px;
+}
+
+.menu-wrapper ul {
+    margin-top: 20px;
+}
+
+.backtotop-wrapper {
+    text-align: right;
+}
+
+.backtotop {
+    background-color: grey;
+}

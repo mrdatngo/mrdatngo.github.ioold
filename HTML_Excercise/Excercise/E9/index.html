@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div>
+        <h3 class="title">
+            <span class="title--color"> Bài 9: </span> Tạo trang web có nội dung là chương trình học của ngành Lập
+            trình.
+        </h3>
+        <img src="./images/solution.png" alt="">
+
+        <h4 class="title under-line">Yêu cầu thiết kế</h4>
+        <table>
+            <tr>
+                <th>STT</th>
+                <th>Đối tượng</th>
+                <th>Yêu cầu</th>
+                <th>Hằng số mẫu</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Trang web</td>
+                <td>- Tiêu đề cửa sổ: Tạo bảng, trộn dòng và cột</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td></td>
+                <td>
+                    - Font chữ là Tahoma và có kích thước là 12px
+                    - Bảng biểu: gồm 11 dòng và 4 cột
+                    <ul>
+                        <li>Dòng tiêu đề: nền màu đỏ bầm, chữ trắng</li>
+                        <li>Trình bày bảng biểu như hình trên</li>
+                    </ul>
+                </td>
+                <td>
+                    #CC0033;#FFFFFF
+                </td>
+            </tr>
+        </table>
+        <h4 class="title under-line">Hướng dẫn giải</h4>
+        <table>
+            <tr>
+                <th>STT</th>
+                <th>Đối tượng</th>
+                <th>Hướng dẫn cài đặt</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Trang web</td>
+                <td>- Sử dụng tag &lt;title&gt;</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Nội dung trang web</td>
+                <td>
+                    - Font chữ và kích thước: Dùng t.t style(font-family, font-size) của tag &lt;body&gt; <br>
+                    - Bảng biểu: Tag &lt;table&gt; và t.t width, border, bordercolor, cellpadding,
+                    cellspacing, align và style(border-collapse) <br>
+                    + Dòng tiêu đề: Tag &lt;tr&gt; và t.t align, bgcolor, style(color; font-weight).
+                    <ul>
+                        <li>Ô đầu: Tag &lt;td&gt; và t.t width, rowspan</li>
+                        <li>Ô thứ 2: Tag &lt;td&gt; và t.t rowspan</li>
+                        <li>Ô thứ 3: Tag &lt;td&gt; và t.t colspan</li>
+                    </ul>
+                    + Dòng 2: Tag &lt;tr&gt; và &lt;td&gt; vẽ 2 ô <br>
+                    + Dòng 3: Tag &lt;tr&gt; <br>
+                    <ul>
+                        <li>Ô đầu: Tag &lt;td&gt; và t.t rowspan, valign, align, style(color)</li>
+                        <li>3 ô cuối: Tag &lt;td&gt; t.t align</li>
+                    </ul>
+                    + Từ dòng thứ 4 đến 8: Dùng tag &lt;td&gt; vẽ 3 ô <br>
+                    + Dòng 9 và 10: Giống dòng 3 và 4 <br>
+                    + Dòng 11: Tag &lt;td&gt; vẽ 1 ô và t.t colspan để trộn thành 1 cột <br>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

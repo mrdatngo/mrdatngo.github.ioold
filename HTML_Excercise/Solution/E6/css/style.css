@@ -1,0 +1,33 @@
+h1 {
+    color: red;
+    text-align: center;
+    border-style: double;
+    text-transform: uppercase;
+}
+
+.big-first-letter::first-letter {
+    font-weight: bold;
+    font-size: 50px;
+    color: red;
+}
+
+#middle-title {
+    text-align: right;
+    background-color: orange;
+    color: white;
+    font-size: 20px;
+}
+
+#second-part {
+    text-align: right;
+}
+
+.city {
+    color: red;
+    font-weight: bold;
+}
+
+.thuonghai {
+    font-style: italic;
+    background-color: yellow;
+}

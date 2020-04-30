@@ -1,0 +1,11 @@
+p {
+    text-align: center;
+}
+
+h1:first-child {
+    text-align: center;
+}
+
+h1:last-child {
+    text-decoration: underline;
+}

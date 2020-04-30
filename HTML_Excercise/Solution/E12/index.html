@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo form và điều kiển trên form</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <h3>Phiếu đăng ký tham gia chương trình khuyến mãi</h3>
+    <div id="wrapper-login" >
+        <form id="login" action="">
+            <table id="form-table">
+                <tr>
+                    <td><label for="name"> Họ và tên</label></td>
+                    <td><input type="text" name="name" id="name" value="Ngô Thúc Đạt"></td>
+                </tr>
+                <tr>
+                    <td> <label for="address"> Địa chỉ </label></td>
+                    <td><input type="address" name="address" id="address" value="2Bia Hùng Vương, Q10"></td>
+                </tr>
+                <tr>
+                    <td> <label for="phone_number"> Phone number </label></td>
+                    <td><input type="text" name="phone_number" id="phone_number" value="0964526985"></td>
+                </tr>
+                <tr>
+                    <td> Phái </td>
+                    <td>
+                        <input type="radio" id="male" name="sex" checked >
+                        <label for="male">Nam</label>
+                        <input type="radio" id="female" name="sex" >
+                        <label for="female">Nữ</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <label for="job"> Nghề nghiệp </label></td>
+                    <td>
+                        <select name="job" id="job">
+                            <option value="teacher">Giáo viên</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <label for="products"> Chọn sản phẩm tham gia </label></td>
+                    <td>
+                        <select name="products" id="products" multiple>
+                            <option value="toothbrush">Kem đánh răng</option>
+                            <option value="botgiat">Bột giặt</option>
+                            <option value="shampoo">Dầu gội đầu</option>
+                            <option value="suatam">Sữa tăm</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <label for="guess_number"> Số người dự đoán tham gia </label></td>
+                    <td><input type="text" name="guess_number" id="guess_number" value="250000"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="control">
+                        <input type="submit" value="Đăng nhập" onclick="event.preventDefault();onSubmit(event)">
+                    </td>
+                </tr>
+                <tr id="notice-wrapper">
+                    <td colspan="2" id="notice" class="control">Bạn đã đăng ký thành công!!!</td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <script>
+        function onSubmit(event) {
+            document.getElementById("notice-wrapper").style.display = "contents"
+        }
+    </script>
+
+    <!-- Center layout by margin auto -->
+    <!-- <h3>Phiếu đăng ký tham gia chương trình khuyến mãi</h3>
+    <div id="wrapper-login" >
+        <form id="login" action="" oninput="result.value = fcode.value">
+            <table id="form-table">
+                <tr>
+                    <td><label for="fcode"> Mã người dùng </label></td>
+                    <td><input type="text" name="fcode" id="fcode" value="default"></td>
+                </tr>
+                <tr>
+                    <td> <label for="password"> Mật khẩu </label></td>
+                    <td><input type="text" id="password"> </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <input type="submit" value="Đăng nhập" onclick="event.preventDefault();onSubmit(event)">
+                    </td>
+                </tr>
+                <tr id="result" style="visibility: hidden;">
+                    <td colspan="2" id="request"></td>
+                </tr>
+                <tr style="text-align: center;">
+                    <td colspan="2"><output name="result" for="fcode"></output></td>
+                </tr>
+            </table>
+        </form>
+    </div> -->
+</body>
+
+</html>

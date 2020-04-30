@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div>
+        <h3 class="title">
+            <span class="title--color"> Bài 13: </span> Tạo trang web cho phép người dùng điền thông tin vào phiếu Đăng
+            ký du lịch
+        </h3>
+        <img src="./images/solution.png" alt="">
+
+        <h4 class="title under-line">Yêu cầu thiết kế</h4>
+        <table>
+            <tr>
+                <th>STT</th>
+                <th>Đối tượng</th>
+                <th>Yêu cầu</th>
+                <th>Hằng số mẫu</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Trang web</td>
+                <td>- Tiêu đề cửa sổ: Tạo form và các điều khiển</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td></td>
+                <td>
+                    - Tạo form <br>
+                    - Tạo table trong form <br>
+                    - Tạo các điểu khiển Text Fields, Checkbox, Radio, Drop-down box, OptionGroup, Textarea và nút
+                    Button <br>
+                    - Điều khiển Chọn tour có danh sách như hình: <br>
+                    - Tạo điều khiển nhãn dùng để in câu thông báo ”Bạn đã đăng ký thành công!!!”
+                </td>
+                <td>
+                </td>
+            </tr>
+        </table>
+
+        <h4 class="title under-line">Hướng dẫn giải</h4>
+        <table>
+            <tr>
+                <th>STT</th>
+                <th>Đối tượng</th>
+                <th>Hướng dẫn cài đặt</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Trang web</td>
+                <td>- Sử dụng tag &lt;title&gt;</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Nội dung trang web</td>
+                <td>
+                    - Tạo form: Tag &lt;form&gt; và t.t id <br>
+                    - Tạo table trong form, gồm 10 dòng 2 cột: Tag &lt;table&gt; và các t.t <br>
+                    - Tạo điều khiển: Tag &lt;input&gt; <br>
+                    <ul>
+                        <li>Text Fields: t.t type (text), id, size</li>
+                        <li>Checkedboxes: t.t type (text), id, checked</li>
+                        <li>Radio buttons: t.t type(radio), name, id, value và checked</li>
+                        <li>Button: Tag &lt;input&gt; và t.t type (button), id, value</li>
+                    </ul>
+                    - Đ.k Dropdown-box Chọn tour: Tag &lt;select&gt; và t.t id, tag &lt;optgroup&gt;
+                    và t.t label , tag &lt;option&gt; và t.t value. <br>
+                    - Đ.k OptionGroup Số lượng đòan khách: Tag &lt;fieldset&gt; và t.t
+                    style(border,; width:350px; height:55px". Tag &lt;legend&gt; và t.t align,
+                    style(font-style; color) để tạo nhãn <br>
+                    - Đ.k Ghi chú: Tag &lt;textarea&gt; và t.t id, style(width:300px) <br>
+                    - Tạo điều khiển nhãn: Tag &lt;div&gt; và t.t id <br>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td> <b>Xử lý chức năng</b> </td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Nút Đồng ý</td>
+                <td>
+                    - Dùng sự kiện onClick của điều khiển nút Button <br>
+                    - Dùng t.t innerText của đ.k nhãn
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

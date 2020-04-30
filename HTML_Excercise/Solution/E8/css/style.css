@@ -1,0 +1,26 @@
+h1 {
+    color: orange;
+    text-align: center;
+}
+
+table, td, th {
+    border: 1px solid purple;
+    padding: 5px;
+}
+td:first-child {
+    width: 100px;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #CC6600;
+    color: white;
+}
+
+tr:nth-child(odd) {
+    background-color: #FFEDCA;
+}

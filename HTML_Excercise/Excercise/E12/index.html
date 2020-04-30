@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div>
+        <h3 class="title">
+            <span class="title--color"> Bài 12: </span> Tạo trang web Phiếu đăng ký tham gia trương trình khuyến mãi
+        </h3>
+        <img src="./images/solution.png" alt="">
+
+        <h4 class="title under-line">Yêu cầu thiết kế</h4>
+        <table>
+            <tr>
+                <th>STT</th>
+                <th>Đối tượng</th>
+                <th>Yêu cầu</th>
+                <th>Hằng số mẫu</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Trang web</td>
+                <td>- Tiêu đề cửa sổ: Tạo form và các điều khiển</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td></td>
+                <td>
+                    - Tạo form <br>
+                    - Tạo table trong form <br>
+                    - Tạo các điểu khiển Text Fields, Radio, Drop-down box và nút Button <br>
+                    - Đ.k Nghề nghiệp có danh sách như sau: Bác sĩ, Kỹ sư, Giáo viên <br>
+                    - Tạo điều khiển nhãn dùng để in câu thông báo ”Bạn đã đăng ký thành công!!!”
+                </td>
+                <td>
+                </td>
+            </tr>
+        </table>
+
+        <h4 class="title under-line">Yêu cầu xử lý:</h4>
+        <table>
+            <tr>
+                <th>STT</th>
+                <th>Đối tượng</th>
+                <th>Yêu cầu</th>
+                <th>Hằng số mẫu</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Nút Đồng ý</td>
+                <td>- Khi chọn: Xuất nội dung ô Mã người dùng ra điều khiển nhãn</td>
+                <td></td>
+            </tr>
+        </table>
+
+        <h4 class="title under-line">Hướng dẫn giải</h4>
+        <table>
+            <tr>
+                <th>STT</th>
+                <th>Đối tượng</th>
+                <th>Hướng dẫn cài đặt</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Trang web</td>
+                <td>- Sử dụng tag &lt;title&gt;</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Nội dung trang web</td>
+                <td>
+                    - Tạo form: Tag &lt;form&gt; và t.t id <br>
+                    - Tạo table trong form, gồm 9 dòng 2 cột: Tag &lt;table&gt; và các t.t <br>
+                    - Tạo điểu khiển: Tag &lt;input&gt; <br>
+                    <ul>
+                        <li>Text Fields: t.t type (text), id, size</li>
+                        <li>Radio buttons: t.t type(radio), name, id, value và checked</li>
+                        <li>Button: Tag &lt;input&gt; và t.t type (button), id, value</li>
+                    </ul>
+                    - Đ.k Dropdown-box Nghề nghiệp: Tag &lt;select&gt; và t.t id, tag &lt;option&gt;
+                    và t.t value. <br>
+                    - Đ.k Dropdown-box Chọn sản phẩm tham gia: Tag &lt;select&gt; và t.t id,
+                    size=4, multiple; Tag &lt;option&gt; và t.t value, selected <br>
+                    - Tạo điều khiển nhãn: Tag &lt;div&gt; và t.t id <br>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td> <b>Xử lý chức năng</b> </td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Nút Đồng ý</td>
+                <td>
+                    - Dùng sự kiện onClick của điều khiển nút Button <br>
+                    - Dùng t.t innerText của đ.k nhãn
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

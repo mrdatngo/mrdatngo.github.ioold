@@ -1,0 +1,20 @@
+.title {
+    font-weight: bold;
+    color: blue;
+}
+
+.title--color {
+    color: red;
+}
+
+.under-line {
+    text-decoration: underline;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+}
