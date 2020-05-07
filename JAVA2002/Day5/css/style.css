@@ -1,0 +1,31 @@
+/* p {
+    color: red
+} */
+
+/* p .red-color {
+    color: red
+}
+
+#third-paragraph {
+    color: blue
+} */
+
+/* #java2002 .parent p {
+    color: red;
+} */
+
+/* #java2002 .parent h3 {
+    color: blue;
+} */
+
+#java2002 > .yello-color {
+    color: yellow
+}
+
+a:active {
+    color: red;
+}
+
+.parent p:first-child {
+    color: green
+}
