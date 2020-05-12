@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layout</title>
     <link rel="stylesheet" href="./css/layout.css">
     <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
+
 <body>
-    <header>Header</header>
+    <header class="block-header__dark">
+        <!-- <div class="block block__transform"></div> -->
+        Header</header>
     <nav class="menu">
         <ul class="list-item">
             <li class="item"><a href="#">Food</a>
@@ -33,18 +39,33 @@
             <li class="item"><a href="#">Film</a></li>
         </ul>
     </nav>
-    <section>
-        <aside>
-            <h4 class="heading">Title</h4>
-            <p>This is side bar</p>
-        </aside>
-        <article>
-            <h3>title</h3>
-            <p>this is description: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident inventore quos pariatur repellendus rerum unde aperiam distinctio, vel necessitatibus asperiores, expedita voluptates possimus! Dolor magni a quam explicabo, suscipit in!</p>
-        </article>
+    <section class="container">
+        <div class="row">
+            <aside class="col-3">
+                <h4 class="heading">Title</h4>
+                <p>This is side bar</p>
+            </aside>
+            <article class="col-9">
+                <h3>title</h3>
+                <p>this is description: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident inventore
+                    quos pariatur repellendus rerum unde aperiam distinctio, vel necessitatibus asperiores, expedita
+                    voluptates possimus! Dolor magni a quam explicabo, suscipit in!</p>
+            </article>
+        </div>
     </section>
     <footer>
         Footer
     </footer>
+
+    <div class="block block__transform"></div>
+    <div class="grant-parent">
+        <div class="parent">
+            <div class="block block__absolute"></div>
+        </div>
+    </div>
+    <p>Static</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam aperiam repellat hic inventore rem laboriosam quo labore, quae eius, molestiae eveniet. Assumenda inventore porro quae quidem, autem dignissimos aliquid at.</p>
+    <img width="200px" height="200px" src="./medias/images/bg.png" alt="">
 </body>
+
 </html>
