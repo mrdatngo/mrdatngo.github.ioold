@@ -1,0 +1,75 @@
+#heading {
+    color: blueviolet
+}
+p.para {
+    color: aqua;
+}
+
+.para {
+    font-size: 30px;
+    color: chartreuse;
+}
+.para .para2 {
+    color: red;
+}
+
+p {
+    font-weight: bold;
+    color: yellow;
+}
+
+#second-para {
+    color: black;
+}
+
+p[class] {
+    font-style: italic;
+}
+
+p[title="no class"] {
+    font-size: 50px;
+}
+
+p[title~="no"] {
+    font-style: italic;
+}
+
+p[title^="no"] {
+    border: 1px solid black;
+}
+
+.grand-parent .parent {
+    color: red;
+}
+
+a:visited {
+    color: black;
+}
+
+a:active {
+    color: green;
+}
+
+a:hover {
+    color: blue;
+}
+
+input:focus {
+    border: 1px solid red;
+}
+
+input {
+    width: 50%;
+}
+
+.elements-psuedo h4:first-child {
+    color: green;
+}
+
+.elements-psuedo h4:last-child {
+    color: red;
+}
+
+.elements-psuedo h4:nth-last-child(3) {
+    text-align: center;
+}

@@ -1,0 +1,63 @@
+body,
+ul,
+li {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: wheat;
+}
+
+nav .menu {
+    background-color: #323031;
+    text-align: center;
+}
+
+nav .menu .item {
+    position: relative;
+    display: inline-block;
+    padding: 15px;
+}
+
+nav .menu .item:hover>a {
+    color: #CECB46;
+    background-color: #292929;
+}
+
+nav .menu .item a {
+    text-transform: uppercase;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+nav .menu .item:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu {
+    position: absolute;
+    top: 45px;
+    width: 200px;
+    background-color: #323031;
+    display: none;
+}
+
+.sub-menu .sub-item {
+    list-style-type: none;
+    text-align: left;
+}
+
+.sub-menu .sub-item a {
+    display: inline-block;
+    padding: 0px;
+}
+
+.sub-menu .sub-item:hover {
+    background-color: #292929;
+}
+
+.sub-menu .sub-item:hover a {
+    color: #CECB46;
+}

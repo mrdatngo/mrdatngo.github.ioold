@@ -1,0 +1,47 @@
+p {
+    color: red;
+}
+
+.relative {
+    position: relative;
+}
+
+.position {
+    /* top: 50px;
+    left: 30px; */
+}
+
+.absolute {
+    position: absolute;
+    top: 200px;
+    left: 100px;
+}
+
+.block {
+    width: 500px;
+    height: 500px;
+    margin-left: 100px;
+    background-color: yellow;
+    position: relative;
+}
+
+.fixed {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+/* transform */
+.small-block {
+    width: 100px;
+    height: 100px;
+}
+
+.red-color {
+    background-color: red;
+}
+
+.rotate {
+    margin-left: 200px;
+    /* transform: rotate(45deg); */
+    transform: scale(1.5, 2);
+}
