@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: green;
+}
+
+nav {
+    background-color: black;
+}
+
+section {
+    background-color: grey;
+}
+
+aside {
+    background-color: red;
+}
+
+article {
+    background-color: blueviolet;
+}
+
+footer {
+    background-color: green;
+}
+
+
+/* layout */
+
+
+/* 
+aside {
+    width: 25%;
+    float: left;
+}
+
+article {
+    width: 75%;
+    float: right;
+}
+
+footer {
+    clear: both;
+} */

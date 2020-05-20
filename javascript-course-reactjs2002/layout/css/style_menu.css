@@ -1,0 +1,55 @@
+body,
+ul,
+li {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: grey;
+}
+
+.menu {
+    background-color: #323031;
+    text-align: center;
+}
+
+.menu .item {
+    display: inline;
+    position: relative;
+}
+
+.menu .item a {
+    display: inline-block;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.menu .item a:hover {
+    color: yellow;
+    background-color: #292929;
+}
+
+.sub-menu .sub-item {
+    text-align: left;
+    list-style-type: none;
+    width: 200px;
+}
+
+.sub-menu {
+    display: none;
+    background-color: #323031;
+    position: absolute;
+    left: 0px;
+}
+
+.sub-menu .sub-item a {
+    width: 180px;
+}
+
+.menu .item:hover .sub-menu {
+    display: block;
+}
