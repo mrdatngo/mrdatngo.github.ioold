@@ -118,14 +118,14 @@ const PI = 3.14;
 
 
 // console.log(Number.MAX_VALUE)
-var i = 0;
-var limit = 10;
-for (var i = 0; i < limit; i++) {
-    // for (var j = 0; j < limit; j++) {
-    //     console.log("i & j", i, "&", j)
-    // }
-    console.log("I love you!")
-}
+// var i = 0;
+// var limit = 10;
+// for (var i = 0; i < limit; i++) {
+//     // for (var j = 0; j < limit; j++) {
+//     //     console.log("i & j", i, "&", j)
+//     // }
+//     console.log("I love you!")
+// }
 
 // var number = Number(prompt("Enter a number: ", 0))
 // while (true) {
@@ -140,17 +140,17 @@ for (var i = 0; i < limit; i++) {
 //     number = Number(prompt("Enter a number: ", 0))
 // }
 
-var myNumber;
-do {
-    myNumber = Number(prompt("Enter a number: ", 0))
-} while (Number.isNaN(myNumber))
+// var myNumber;
+// do {
+//     myNumber = Number(prompt("Enter a number: ", 0))
+// } while (Number.isNaN(myNumber))
 
 /// check even odd of myNumber
-if (myNumber % 2 == 1) {
-    alert("ODD")
-} else {
-    alert("EVEN")
-}
+// if (myNumber % 2 == 1) {
+//     alert("ODD")
+// } else {
+//     alert("EVEN")
+// }
 
 // EVEN
 // ODD 7 % 2 = 1
@@ -180,3 +180,26 @@ var number = 10;
 // } else {
 //     alert("Its' false")
 // }
+
+// Check prime number
+var myNumber;
+do {
+    myNumber = Number(prompt("Enter a number: ", 0))
+} while (Number.isNaN(myNumber))
+
+
+var isPrime = true;
+if (myNumber <= 1) { isPrime = false }
+//Math.sqrt(value) căn bậc 2
+for (var i = 2; i < Math.sqrt(myNumber); i++) {
+    if (myNumber % i == 0) {
+        isPrime = false;
+        break;
+    }
+}
+
+if (isPrime) {
+    alert("Prime")
+} else {
+    alert("Not prime")
+}
