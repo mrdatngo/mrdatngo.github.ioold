@@ -57,38 +57,49 @@ var buyCarCallback = (resolve, reject) => {
 var hangoutCallback = (resolve, reject) => {
     setTimeout(() => {
         if (goodBoy) {
-            resolve()
+            resolve({ name: "Hangout" })
         } else {
             reject({ reason: "Failed" })
         }
-    }, 1000)
+    }, 3000)
 }
 
-var buildHouseCallBack = (resolve, reject) => {
-    setTimeout(() => {
-        resolve()
-    }, 0)
-}
-var buyCarPromise = new Promise(buyCarCallback);
-buyCarPromise
-    .then((data) => {
-        console.log("Bought car: ", data.name);
-        var hangoutPromise = new Promise(hangoutCallback);
-        var buildHousePromise = new Promise(buildHouseCallBack);
-        return Promise.all([hangoutPromise, buildHousePromise])
-    })
-    .then(() => {
-        console.log("Have a girl friend and house");
-        // return new Promise(SettleDownCallback)
-    })
-    // .then(() => {
-    //     console.log("Settle down")
-    // })
-    // .then(() => {
-    //     console.log("Have babies")
-    // })
-    .catch((data) => {
-        console.log("Reject:", data.reason)
-    })
+// var buildHouseCallBack = (resolve, reject) => {
+//     setTimeout(() => {
+//         resolve()
+//     }, 0)
+// }
+// var buyCarPromise = new Promise(buyCarCallback);
+// buyCarPromise
+//     .then((data) => {
+//         console.log("Bought car: ", data.name);
+//         var hangoutPromise = new Promise(hangoutCallback);
+//         var buildHousePromise = new Promise(buildHouseCallBack);
+//         return Promise.all([hangoutPromise, buildHousePromise])
+//     })
+//     .then(() => {
+//         console.log("Have a girl friend and house");
+//     })
+//     .catch((data) => {
+//         console.log("Reject:", data.reason)
+//     })
 
 // async, await
+
+async function myPromises() {
+    var buyCarResolve = await new Promise(buyCarCallback)
+    console.log("buy car done")
+
+    var hangoutResolve = await new Promise(hangoutCallback)
+    console.log("hangout done")
+
+    console.log("All done: ", buyCarResolve, hangoutResolve)
+        // buyCarPromise.then(() => {
+        //     console.log("buyCarPromise: ", buyCarPromise)
+        // })
+        // console.log("HangoutPromise.....")
+}
+
+myPromises()
+
+console.log("My Main Thread")
