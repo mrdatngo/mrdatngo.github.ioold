@@ -85,12 +85,28 @@ btnSubmit.onclick = function(event) {
     var username = inputUsername.value;
     var password = inputPassword.value;
     console.log(username, password);
+    txtUserError = ""
+    txtPasswordError = ""
     if (username === "") {
-        errUsername.innerText = "Please enter username"
+        txtUserError = "Please enter username"
+    } else if (username.substr(0, 3) !== "T3H") {
+        txtUserError = "Username must start with 'T3H'"
+    } else if (username.length < 6) {
+        txtUserError = "Username must have more than 6 characters"
+    }
+
+    if (password == "") {
+        txtPasswordError = "Please enter password"
+    }
+    if (txtUserError != "" || txtPasswordError != "") {
+        errUsername.innerText = txtUserError
+        errPassword.innerText = txtPasswordError
+        event.preventDefault();
     }
     // if ! validate oke {
     //     event.preventDefault();
     // }
+
 }
 
 console.log("Elements", inputUsername, inputPassword, errUsername, errPassword, btnSubmit)
