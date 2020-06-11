@@ -81,26 +81,37 @@ var inputUsername = document.getElementById("username");
 var inputPassword = document.getElementById("pwd");
 var btnSubmit = document.getElementById("js-btn-submit");
 
-btnSubmit.onclick = function(event) {
-    var username = inputUsername.value;
-    var password = inputPassword.value;
-    console.log(username, password);
-    txtUserError = ""
-    txtPasswordError = ""
-    if (username === "") {
-        txtUserError = "Please enter username"
-    } else if (username.substr(0, 3) !== "T3H") {
-        txtUserError = "Username must start with 'T3H'"
-    } else if (username.length < 6) {
-        txtUserError = "Username must have more than 6 characters"
-    }
+var isAlpha = function(ch) {
+    return /^[A-Za-z0-9]$/i.test(ch);
+}
 
-    if (password == "") {
-        txtPasswordError = "Please enter password"
-    }
-    if (txtUserError != "" || txtPasswordError != "") {
-        errUsername.innerText = txtUserError
-        errPassword.innerText = txtPasswordError
+btnSubmit.onclick = function(event) {
+    try {
+        var username = inputUsername.value;
+        var password = inputPassword.value;
+        console.log(username, password);
+        txtUserError = ""
+        txtPasswordError = ""
+        if (username === "") {
+            txtUserError = "Please enter username"
+        } else if (username.substr(0, 3) !== "T3H") {
+            txtUserError = "Username must start with 'T3H'"
+        } else if (username.length < 6) {
+            txtUserError = "Username must have more than 6 characters"
+        } else if (!isAlpha(username)) {
+            txtUserError = "Username not contain special characters"
+        }
+
+        if (password == "") {
+            txtPasswordError = "Please enter password"
+        }
+        if (txtUserError != "" || txtPasswordError != "") {
+            errUsername.innerText = txtUserError
+            errPassword.innerText = txtPasswordError
+            event.preventDefault();
+        }
+    } catch (e) {
+        console.log(e)
         event.preventDefault();
     }
     // if ! validate oke {
