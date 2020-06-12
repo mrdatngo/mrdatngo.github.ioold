@@ -114,10 +114,6 @@ btnSubmit.onclick = function(event) {
         console.log(e)
         event.preventDefault();
     }
-    // if ! validate oke {
-    //     event.preventDefault();
-    // }
-
 }
 
 console.log("Elements", inputUsername, inputPassword, errUsername, errPassword, btnSubmit)
