@@ -10,5 +10,21 @@ btnShow.addEventListener("click", () => {
 var inputFirstNumber = document.getElementById("js-first-number");
 var inputSecondNumber = document.getElementById("js-second-number");
 var inputResult = document.getElementById("js-result");
-var btnCaculate = document.getElementById("js-btn-caculate");
-console.log(inputFirstNumber, inputSecondNumber, inputResult, btnCaculate);
+// var btnCaculate = document.getElementById("js-btn-caculate");
+// console.log(inputFirstNumber, inputSecondNumber, inputResult, btnCaculate);
+
+inputFirstNumber.oninput = caculate;
+inputSecondNumber.oninput = caculate;
+
+// inputFirstNumber.addEventListener("input", function() {
+//     alert("Hihi")
+// })
+
+// btnCaculate.onclick = caculate;
+
+function caculate() {
+    let firstValue = Number(inputFirstNumber.value);
+    let secondValue = Number(inputSecondNumber.value);
+    let total = firstValue + secondValue;
+    inputResult.value = total;
+}
