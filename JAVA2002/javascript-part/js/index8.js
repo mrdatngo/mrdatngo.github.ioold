@@ -44,3 +44,22 @@ function caculate() {
     // console.log("Total", String(total))
     inputResult.value = total;
 }
+// createElement, appendChild
+var unorderList = document.getElementById("js-todo");
+var inputAdd = document.getElementById("js-input-add");
+var btnAdd = document.getElementById("js-btn-add");
+
+console.log(unorderList, inputAdd, btnAdd)
+btnAdd.onclick = () => {
+    let newTask = inputAdd.value;
+    // alert(newTask);
+    let listItem = document.createElement("li");
+    let buttonRemove = document.createElement("button")
+    listItem.innerText = newTask;
+    buttonRemove.innerText = "-";
+    buttonRemove.onclick = () => {
+        unorderList.removeChild(listItem)
+    }
+    listItem.append(buttonRemove)
+    unorderList.append(listItem);
+}
