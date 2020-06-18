@@ -1,4 +1,4 @@
-let PI = 3.14
+let PI = 3.14;
 var x2;
 
 function task() {
