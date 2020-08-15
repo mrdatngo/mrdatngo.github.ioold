@@ -1,4 +1,7 @@
-body, ol, ul, li {
+body,
+ol,
+ul,
+li {
     padding: 0px;
     margin: 0px;
 }
@@ -7,7 +10,11 @@ html {
     scroll-behavior: smooth;
 }
 
-h1,h2,h3,h4,h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -22,6 +29,7 @@ p {
     top: 0px;
     z-index: 1;
 }
+
 #header .nav {
     height: 75px;
     max-width: 1200px;
@@ -64,7 +72,7 @@ p {
 }
 
 #header .nav .book-room {
-    background-image: linear-gradient(to bottom,#ad9d83 0,#7f7159 100%);
+    background-image: linear-gradient(to bottom, #ad9d83 0, #7f7159 100%);
     right: 10px;
     position: absolute;
     top: 50%;
@@ -78,7 +86,9 @@ p {
     white-space: nowrap;
 }
 
+
 /* slider */
+
 #slider {
     position: relative;
 }
@@ -86,7 +96,6 @@ p {
 #slider .slide-container {
     height: 600px;
 }
-
 
 #slider .slide-img {
     height: 600px;
@@ -100,7 +109,6 @@ p {
     height: 100%;
     width: 100%;
 }
-
 
 #slider .slide-controller [class*="-arrow"] {
     position: absolute;
@@ -130,11 +138,12 @@ p {
 #slider .slide-controller .right-arrow {
     right: 0;
 }
+
 #slider .slide-slogan {
     max-width: 500px;
     height: 500px;
     position: absolute;
-    top:25%;
+    top: 25%;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -142,13 +151,16 @@ p {
     color: #FFF;
     font-family: "Playfair Display";
 }
+
 #slider .slide-slogan .title {
     font-size: 60px;
     margin: 10px;
 }
+
 #slider .slide-slogan .divider {
     width: 50px;
 }
+
 #slider .slide-slogan .content {
     font-size: 18px;
     color: #EBEBEC;
@@ -162,16 +174,17 @@ p {
         height: auto;
         display: none;
     }
-
     #header .nav .nav-wrapper-sm.active {
         display: block;
     }
-
     @keyframes menu-slide-down {
-        from { height: 0px;}
-        to { height: 170px;}
+        from {
+            height: 0px;
+        }
+        to {
+            height: 170px;
+        }
     }
-
     #header .nav .nav-wrapper-sm {
         background-color: rgba(0, 0, 0, 0.7);
         z-index: 100;
@@ -195,23 +208,22 @@ p {
     .section-type1 [class="reverse"] {
         /* flex-direction: row-reverse; */
     }
-    .section h2, .section h3 {
+    .section h2,
+    .section h3 {
         text-align: center;
     }
-
     .section-type2 .content-box {
         margin: 0px !important;
-        background-color: #43523C;;
+        background-color: #43523C;
+        ;
     }
-
     .section-type2 .img-box {
-        background-color: #43523C;;
+        background-color: #43523C;
+        ;
     }
-
     .article .section {
         margin: 0;
-    } 
-    
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -236,18 +248,22 @@ p {
     transform: translateY(-50%);
 }
 
-.menu-bar-sm >i:hover {
+.menu-bar-sm>i:hover {
     cursor: pointer;
     color: white;
 }
 
-.menu-bar-sm > i {
+.menu-bar-sm>i {
     color: #EBEBEC;
 }
 
 @keyframes flash {
-    from {opacity: 0.6;}
-    to {opacity:  1;}
+    from {
+        opacity: 0.6;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .slide-img {
@@ -273,20 +289,24 @@ p {
     /* padding: 10px; */
 }
 
-.img-box, .content-box {
+.img-box,
+.content-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.section .content-box h2, .article h2 {
+
+.section .content-box h2,
+.article h2 {
     padding: 0px;
     margin: 0px;
     font-size: 48px;
     text-transform: uppercase;
 }
 
-.section .content-box h3, .article h3 {
+.section .content-box h3,
+.article h3 {
     margin-top: 0px;
     font-size: 36px;
 }
@@ -303,10 +323,16 @@ p {
     color: #FFF;
 }
 
+
 /* animation part */
+
 @keyframes zoom-out {
-    from { transform: scale(0.6); }
-    to { transform: scale(1); }
+    from {
+        transform: scale(0.6);
+    }
+    to {
+        transform: scale(1);
+    }
 }
 
 .js-zoom-out {
@@ -317,7 +343,8 @@ p {
     opacity: 0;
 }
 
-.fadein, .fadeout {
+.fadein,
+.fadeout {
     opacity: 0;
     -moz-transition: opacity 0.4s ease-in-out;
     -o-transition: opacity 0.4s ease-in-out;
@@ -325,11 +352,13 @@ p {
     transition: opacity 0.4s ease-in-out;
     transition-delay: 0.3s;
 }
+
 .fadein {
     opacity: 1;
 }
 
-.slidein, .slideout {
+.slidein,
+.slideout {
     opacity: 0;
     transform: translateY(-30px);
     transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
@@ -341,7 +370,9 @@ p {
     transform: translateY(0);
 }
 
+
 /* contact */
+
 .contact {
     background-image: url("../images/slider_1.jpg");
     background-attachment: fixed;
@@ -349,6 +380,7 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .contact-box-wrapper {
     width: 100%;
     height: 700px;
@@ -359,7 +391,8 @@ p {
     float: none;
 }
 
-.input-wrapper input, .input-wrapper select {
+.input-wrapper input,
+.input-wrapper select {
     border: 1px solid white;
     width: 80%;
     height: 40px;
@@ -373,7 +406,8 @@ p {
     color: white;
 }
 
-.select-container input, .select-container select{
+.select-container input,
+.select-container select {
     width: 90%;
 }
 
@@ -382,7 +416,8 @@ p {
     color: black
 }
 
-.footer-social ul, .footer-social li {
+.footer-social ul,
+.footer-social li {
     display: inline-block;
 }
 
@@ -392,32 +427,35 @@ p {
 }
 
 .footer-info a {
-    color: rgba(255,255,255,.8);
+    color: rgba(255, 255, 255, .8);
 }
 
 .footer-info a:active {
-    color: rgba(255,255,255,.8);
+    color: rgba(255, 255, 255, .8);
 }
 
 .copyright {
     background-color: #43523C;
 }
+
 .light-color-medium {
-    color: rgba(255,255,255,.8);
+    color: rgba(255, 255, 255, .8);
 }
 
 
 /* Services */
+
 .tab-bar .item-wrapper {
     width: 100%;
     display: flex;
     justify-content: center;
     list-style: none;
 }
+
 .tab-bar .item-wrapper .item {
     padding: 10px;
     margin: 10px 5px 0 5px;
-    background-image: linear-gradient(to bottom,#ad9d83 0,#7f7159 100%);
+    background-image: linear-gradient(to bottom, #ad9d83 0, #7f7159 100%);
     cursor: pointer;
     opacity: 0.7;
 }
@@ -430,7 +468,9 @@ p {
     opacity: 1;
 }
 
+
 /* Room infor */
+
 .room-infor {
     padding-left: 20px;
 }
