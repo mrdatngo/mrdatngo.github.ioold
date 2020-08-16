@@ -12,14 +12,19 @@ html {
 
 h1,
 h2,
-h3,
-h4,
 h5 {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+h3,
+h4 {
+    font-family: serif;
+}
+
 p {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: serif;
+    font-size: larger;
+    text-align: justify;
 }
 
 #header {
@@ -68,6 +73,10 @@ p {
 }
 
 #header .nav .nav-wrapper .item a:hover {
+    color: #FFF;
+}
+
+#header .nav .nav-wrapper .active a {
     color: #FFF;
 }
 
@@ -481,4 +490,14 @@ p {
 
 .room-container .content.active {
     display: block;
+}
+
+
+/* show less - show more */
+
+.show-less-link,
+.show-more-link {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
 }

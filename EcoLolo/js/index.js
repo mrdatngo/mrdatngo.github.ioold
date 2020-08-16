@@ -23,17 +23,17 @@ var leftArrow = document.getElementsByClassName("js-left-arrow")[0];
 var rightArrow = document.getElementsByClassName("js-right-arrow")[0];
 var imageShow = document.getElementsByClassName("js-slide-img")[0];
 var slogonsViewer = document.getElementsByClassName("js-slide-slogon")[0];
-var urls = [
+var urlsImages = [
     "./images/slider_1.jpg",
     "./images/slider_2.jpg",
-    "./images/slider_3.jpg"
+    "./images/slider_3.jpg",
 ];
 var slogons = [
     "Nơi cực Bắc tổ quốc, một Hà Giang đích thực còn sót lại",
     "Khu nghỉ dưỡng độc đáo tại Hà Giang, nơi mang đậm dấu ấn văn hoá độc đáo tại hà Giang, mảnh đất của những dãy núi huyền thoại",
-    "Đủ gần để khám phá, đủ xa để riêng tư"
+    "Đủ gần để khám phá, đủ xa để riêng tư",
 ];
-var numberOfUrl = urls.length;
+var numberOfUrl = urlsImages.length;
 var currentUrlIndex = 0;
 
 // Init
@@ -62,7 +62,7 @@ function nextImage(step) {
     }
     imageShow.style.display = "none";
     setTimeout(() => {
-        imageShow.style.backgroundImage = `url(${urls[currentUrlIndex]})`;
+        imageShow.style.backgroundImage = `url(${urlsImages[currentUrlIndex]})`;
         imageShow.style.display = "block";
         // slogons.h2.value = slogons[currentUrlIndex]
         slogonsViewer.getElementsByClassName("content")[0].innerHTML =
@@ -70,12 +70,40 @@ function nextImage(step) {
     }, 0);
 }
 
-setInterval(() => nextImage(1), 4000);
+setInterval(() => nextImage(1), 3000);
+
+// active navbar
+var navWrapper = document.querySelector("#header .nav .nav-wrapper");
+var items = navWrapper.querySelectorAll(".item");
+var urls = navWrapper.querySelectorAll("a");
+var hashes = Array.from(urls).map((url) => url.hash);
+var anchors = hashes.map((hash) => {
+    return document.querySelector(hash);
+});
+
+function activeAnchor(pageYOffset) {
+    var nearTop = Number.MAX_VALUE;
+    var hashMatch = "";
+    for (var i = 0; i < anchors.length; i++) {
+        let anchor = anchors[i]
+        if (Math.abs(anchor.offsetTop - pageYOffset) < nearTop) {
+            nearTop = Math.abs(anchor.offsetTop - pageYOffset);
+            hashMatch = hashes[i];
+        }
+    }
+
+    if (hashMatch != "") {
+        items.forEach(item => {
+            item.classList.remove("active")
+        })
+        items[hashes.indexOf(hashMatch)].className += " " + "active"
+    }
+}
 
 // animation
 window.addEventListener("scroll", () => {
     console.log("payYOffset", window.pageYOffset);
-
+    activeAnchor(window.pageYOffset);
     if (window.pageYOffset >= 30) {
         document.querySelector(".js-zoom-out.first").style.animation =
             "zoom-out 0.5s ease 0s 1 forwards";
@@ -104,17 +132,43 @@ window.addEventListener("scroll", () => {
 
     if (window.pageYOffset >= 750) {
         var slides = document.querySelectorAll(".js-text-slide");
-        console.log("Slides", slides);
+        // console.log("Slides", slides);
         for (var i = 0; i < slides.length; i++) {
             slides[i].classList.remove("slideout");
             slides[i].classList.add("slidein");
         }
     } else if (window.pageYOffset < 600) {
         var slides = document.querySelectorAll(".js-text-slide");
-        console.log("Slides", slides);
+        // console.log("Slides", slides);
         for (var i = 0; i < slides.length; i++) {
             slides[i].classList.remove("slidein");
             slides[i].classList.add("slideout");
         }
     }
 });
+
+// show less - show more
+var showLesses = document.getElementsByClassName("js-show-less")
+var showMores = document.getElementsByClassName("js-show-more")
+var showLessBtns = document.getElementsByClassName("js-show-less-link")
+var showMoreBtns = document.getElementsByClassName("js-show-more-link")
+// console.log("ShowMoreBtn: ", showMoreBtn)
+for(let i = 0; i < showMoreBtns.length; i++) {
+    let showMoreBtn = showMoreBtns[i]
+    showMoreBtn.addEventListener("click", (event) => {
+        showLesses[i].className += " hidden";
+        showMoreBtns[i].className += " hidden";
+        showMores[i].classList.remove("hidden");
+        showLessBtns[i].classList.remove("hidden");
+    })
+}
+
+for(let i = 0; i < showLessBtns.length; i++) {
+    let showLessBtn = showLessBtns[i]
+    showLessBtn.addEventListener("click", (event) => {
+        showMores[i].className += " hidden";
+        showLessBtns[i].className += " hidden";
+        showLesses[i].classList.remove("hidden");
+        showMoreBtns[i].classList.remove("hidden");
+    })
+}
