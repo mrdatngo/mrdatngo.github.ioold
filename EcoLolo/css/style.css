@@ -246,6 +246,10 @@ p {
     .hidden-sm-down {
         display: none !important;
     }
+    .input-container p,
+    .select-container p {
+        margin: 0px;
+    }
 }
 
 .menu-bar-sm {
