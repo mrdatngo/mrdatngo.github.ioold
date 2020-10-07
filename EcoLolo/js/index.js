@@ -27,10 +27,14 @@ var urlsImages = [
     "./images/slider_1.jpg",
     "./images/slider_2.jpg",
     "./images/slider_3.jpg",
+    "./images/slider_4.jpg",
+    "./images/slider_5.jpg"
 ];
 var slogons = [
     "Nơi cực Bắc tổ quốc, một Hà Giang đích thực còn sót lại",
     "Khu nghỉ dưỡng độc đáo tại Hà Giang, nơi mang đậm dấu ấn văn hoá độc đáo tại hà Giang, mảnh đất của những dãy núi huyền thoại",
+    "Đủ gần để khám phá, đủ xa để riêng tư",
+    "Đủ gần để khám phá, đủ xa để riêng tư",
     "Đủ gần để khám phá, đủ xa để riêng tư",
 ];
 var numberOfUrl = urlsImages.length;
@@ -102,7 +106,6 @@ function activeAnchor(pageYOffset) {
 
 // animation
 window.addEventListener("scroll", () => {
-    console.log("payYOffset", window.pageYOffset);
     activeAnchor(window.pageYOffset);
     if (window.pageYOffset >= 30) {
         document.querySelector(".js-zoom-out.first").style.animation =
@@ -132,14 +135,12 @@ window.addEventListener("scroll", () => {
 
     if (window.pageYOffset >= 750) {
         var slides = document.querySelectorAll(".js-text-slide");
-        // console.log("Slides", slides);
         for (var i = 0; i < slides.length; i++) {
             slides[i].classList.remove("slideout");
             slides[i].classList.add("slidein");
         }
     } else if (window.pageYOffset < 600) {
         var slides = document.querySelectorAll(".js-text-slide");
-        // console.log("Slides", slides);
         for (var i = 0; i < slides.length; i++) {
             slides[i].classList.remove("slidein");
             slides[i].classList.add("slideout");
@@ -152,7 +153,7 @@ var showLesses = document.getElementsByClassName("js-show-less")
 var showMores = document.getElementsByClassName("js-show-more")
 var showLessBtns = document.getElementsByClassName("js-show-less-link")
 var showMoreBtns = document.getElementsByClassName("js-show-more-link")
-// console.log("ShowMoreBtn: ", showMoreBtn)
+
 for(let i = 0; i < showMoreBtns.length; i++) {
     let showMoreBtn = showMoreBtns[i]
     showMoreBtn.addEventListener("click", (event) => {

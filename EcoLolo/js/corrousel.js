@@ -1,15 +1,15 @@
 // navbar control
 
 var lists = [
-    ["./images/slider_1.jpg", "./images/slider_1.jpg", "./images/slider_1.jpg"],
-    ["./images/slider_2.jpg", "./images/slider_2.jpg", "./images/slider_2.jpg"],
-    ["./images/slider_3.jpg", "./images/slider_3.jpg", "./images/slider_3.jpg"]
+    ["./images/bangalow_1.jpg", "./images/bangalow_2.jpg", "./images/bangalow_3.jpg", "./images/bangalow_4.jpg", "./images/bangalow_5.jpg", "./images/bangalow_6.jpg"],
+    ["./images/private_1.jpg", "./images/slider_4.jpg"],
+    ["./images/dorm_1.jpg", "./images/dorm_2.jpg", "./images/dorm_3.jpg"]
 ];
 
 var navbars = document.getElementsByClassName("js-room-navbar");
 var imageShowList = document.getElementsByClassName("js-slide-img-show");
 var contents = document.querySelectorAll(".js-room-container .content");
-
+var curListIndex = 0
 if (navbars) {
     for (let i = 0; i < navbars.length; i++) {
         let nav = navbars[i]
@@ -35,7 +35,8 @@ if (navbars) {
         }
 
         let assignList = (i) => {
-            for(let k = 0; k < 3; k++) {
+            curListIndex = i;
+            for(let k = 0; k < lists[i].length; k++) {
                 imageShowList[k].src = lists[i][k];
             }
         }
@@ -44,9 +45,31 @@ if (navbars) {
             assignActiveContent(i)
             nav.classList.add("active")
             assignList(i)
+            initElement(i, slides[0].parentNode)
         })
     }
 }
+
+function initElement(i, slidesWrapper) {
+    var slides = slidesWrapper.getElementsByClassName("slide-show")
+    while( slides > 0) {
+        var slide = slides[slides.length - 1]
+        slide.remove(slide)
+    }
+    // for(var i = 0; i < slides.length; i++) {
+    //     slides.removeChild(slides[i])
+    // }
+    var numberOfSlide = lists[i].length;
+    for(var i = 0; i < numberOfSlide; i++) {
+        var div = document.createElement('div')
+        div.classList.add("slide-show")
+        var imgElement = document.createElement('img')
+        imgElement.classList.add("js-slide-img-show")
+        div.appendChild(imgElement)
+        slidesWrapper.appendChild(div)
+    }
+}
+
 leftArrow.addEventListener("click", function () {
     nextImage(-1)
 })
@@ -57,7 +80,11 @@ var numberOfSlide = 3;
 var currentIndex = 0;
 var interVal;
 var running = false;
+var slideWrapper = document.getElementsByClassName("slide-show-wrapper")[0]
+initElement(0, slideWrapper)
 var slides = document.getElementsByClassName("slide-show")
+console.log("slides: ", slides)
+
 for (var i = 0; i < slides.length; i++) {
     slides[i].style.display = "none"
 }
@@ -72,10 +99,10 @@ function pushSlideUserAction(step) {
 function pushSlide(step, createAutoSlide) {
     let nextIndex = currentIndex + step;
     if (nextIndex < 0) {
-        nextIndex += numberOfSlide;
+        nextIndex += lists[curListIndex].length;
     }
-    if (nextIndex >= numberOfSlide) {
-        nextIndex -= numberOfSlide;
+    if (nextIndex >= lists[curListIndex].length) {
+        nextIndex -= lists[curListIndex].length;
     }
     let way = "left";
     if (step == -1) {

@@ -103,11 +103,12 @@ p {
 }
 
 #slider .slide-container {
-    height: 600px;
+    /* height: 600px; */
+    height: 100vh;
 }
 
 #slider .slide-img {
-    height: 600px;
+    height: 100vh;
     width: 100%;
     background-image: url("../images/slider_1.jpg");
     background-position: center;
@@ -422,7 +423,7 @@ p {
 
 .select-container select option {
     text-align: center;
-    color: black
+    color: black;
 }
 
 .footer-social ul,
@@ -449,6 +450,25 @@ p {
 
 .light-color-medium {
     color: rgba(255, 255, 255, .8);
+}
+
+.input-wrapper input,
+.input-wrapper select {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+}
+
+.input-wrapper input::placeholder {
+    color: #ddd;
+}
+
+#book-room {
+    background-image: linear-gradient(to bottom, #ad9d83 0, #7f7159 100%);
+}
+
+#book-room:hover {
+    cursor: pointer;
+    background-image: linear-gradient(to bottom, #ad9d83 0, #7f7159 100%);
 }
 
 
@@ -500,4 +520,11 @@ p {
     color: blue;
     text-decoration: underline;
     cursor: pointer;
+}
+
+
+/* Error */
+
+.input-wrapper p span[id^="error-"] {
+    color: #F00
 }
